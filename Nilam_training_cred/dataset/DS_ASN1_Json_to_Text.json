@@ -1,0 +1,16 @@
+{
+	"name": "DS_ASN1_Json_to_Text",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ASN_1_Json_to_text",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "/fact"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

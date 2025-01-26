@@ -1,0 +1,80 @@
+{
+	"name": "ASN2_2_validation activity",
+	"properties": {
+		"activities": [
+			{
+				"name": "Validation1",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "DS_ASN1_ADLS_TEXT",
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')",
+							"foldername": "assin_1"
+						}
+					},
+					"timeout": "0.12:00:00",
+					"sleep": 10
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Validation1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "b",
+					"value": "false"
+				}
+			},
+			{
+				"name": "Set variable1_copy1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Validation1",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "a",
+					"value": "true1"
+				}
+			}
+		],
+		"variables": {
+			"a": {
+				"type": "String",
+				"defaultValue": "true"
+			},
+			"b": {
+				"type": "String",
+				"defaultValue": "false"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-01-23T13:16:24Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

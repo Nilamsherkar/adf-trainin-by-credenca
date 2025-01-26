@@ -1,0 +1,36 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Link_adls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FOLDERNAME": {
+				"type": "string"
+			},
+			"FILENAME": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().FILENAME",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat('assign3parq/',dataset().FOLDERNAME)",
+					"type": "Expression"
+				},
+				"fileSystem": "adf-training"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

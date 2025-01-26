@@ -1,0 +1,21 @@
+{
+	"name": "SqlServer3",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "Nilam\\nilam",
+			"database": "TEST",
+			"encrypt": "optional",
+			"trustServerCertificate": true,
+			"authenticationType": "Windows",
+			"userName": "Nilam\\nilam",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjMDU5OWYwMy1kNzY4LTRiMjMtYTgzNS02N2M2ZWVlYTIyYjgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SHIR-adf-tain-Nilam",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"name": "DS_ASN3_SQL_TO_ADLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Link_adls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FILENAME": {
+				"type": "string"
+			},
+			"FOLDERNAME": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().FILENAME",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat('assign3/',dataset().FOLDERNAME)",
+					"type": "Expression"
+				},
+				"fileSystem": "adf-training"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

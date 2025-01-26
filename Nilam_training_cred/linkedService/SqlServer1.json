@@ -1,0 +1,21 @@
+{
+	"name": "SqlServer1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "NILAM\\MSSQLSERVER2022",
+			"database": "AdventureWorks2014",
+			"encrypt": "optional",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "sa2",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI2ODQzMDc3YS03NTkxLTRmOTEtYWNmYi01OGIyNmE2NGI2OWYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SHIR-adf-tain-Nilam",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

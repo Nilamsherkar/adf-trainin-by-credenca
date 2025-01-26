@@ -1,0 +1,47 @@
+{
+	"name": "excel_child2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls_exel",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename_para": {
+				"type": "string",
+				"defaultValue": "abc"
+			},
+			"sheetname_para": {
+				"type": "string",
+				"defaultValue": "zzzz"
+			}
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": {
+				"value": "@dataset().sheetname_para",
+				"type": "Expression"
+			},
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().filename_para",
+					"type": "Expression"
+				},
+				"fileSystem": "excel-file-load"
+			}
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -285,13 +285,7 @@
 										{
 											"referenceName": "DS_ASN1_ADLS_TEXT",
 											"type": "DatasetReference",
-											"parameters": {
-												"filename": {
-													"value": "@item().TABLE_NAME",
-													"type": "Expression"
-												},
-												"foldername": "@item().TABLE_NAME"
-											}
+											"parameters": {}
 										}
 									]
 								}

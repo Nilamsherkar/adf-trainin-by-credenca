@@ -95,10 +95,7 @@
 							"dataset": {
 								"referenceName": "DS_ASN1_ADLS_TEXT",
 								"type": "DatasetReference",
-								"parameters": {
-									"filename": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')",
-									"foldername": "assin_1"
-								}
+								"parameters": {}
 							},
 							"timeout": "0.12:00:00",
 							"sleep": 10
@@ -240,16 +237,19 @@
 							{
 								"referenceName": "DS_ASN1_ADLS_TEXT",
 								"type": "DatasetReference",
-								"parameters": {
-									"filename": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')",
-									"foldername": "abcd"
-								}
+								"parameters": {}
 							}
 						]
 					}
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"filename": {
+						"type": "string",
+						"defaultValue": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')"
+					}
 				},
 				"annotations": [],
 				"lastPublishTime": "2025-01-25T10:33:29Z"
@@ -373,13 +373,7 @@
 										{
 											"referenceName": "DS_ASN1_ADLS_TEXT",
 											"type": "DatasetReference",
-											"parameters": {
-												"filename": {
-													"value": "@item().TABLE_NAME",
-													"type": "Expression"
-												},
-												"foldername": "@item().TABLE_NAME"
-											}
+											"parameters": {}
 										}
 									]
 								}
@@ -1001,27 +995,13 @@
 					"referenceName": "Link_adls",
 					"type": "LinkedServiceReference"
 				},
-				"parameters": {
-					"filename": {
-						"type": "string"
-					},
-					"foldername": {
-						"type": "string"
-					}
-				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": {
-							"value": "@dataset().filename",
-							"type": "Expression"
-						},
-						"folderPath": {
-							"value": "@concat('Asn3\\',dataset().foldername)",
-							"type": "Expression"
-						},
+						"fileName": "fact_03022025",
+						"folderPath": "/ Asn3 / abcd",
 						"fileSystem": "adf-training"
 					},
 					"columnDelimiter": ",",

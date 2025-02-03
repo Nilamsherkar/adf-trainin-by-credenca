@@ -27,7 +27,12 @@
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
+							"type": "AzureBlobFSWriteSettings",
+							"metadata": [
+								{
+									"value": ""
+								}
+							]
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
@@ -54,6 +59,11 @@
 								"sink": {
 									"name": "length"
 								}
+							},
+							{
+								"source": {
+									"path": "$['filename']"
+								}
 							}
 						]
 					}
@@ -67,15 +77,17 @@
 				"outputs": [
 					{
 						"referenceName": "DS_ASN1_ADLS_TEXT",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')",
-							"foldername": "abcd"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
 		],
+		"parameters": {
+			"filename": {
+				"type": "string",
+				"defaultValue": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')"
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2025-01-25T10:33:29Z"
 	},

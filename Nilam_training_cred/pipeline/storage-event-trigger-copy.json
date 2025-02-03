@@ -69,6 +69,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "filename",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "date",
 									"type": "String",

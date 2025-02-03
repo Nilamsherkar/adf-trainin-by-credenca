@@ -70,7 +70,7 @@
 							},
 							{
 								"source": {
-									"name": "filename",
+									"name": "filename ",
 									"type": "String",
 									"physicalType": "String"
 								},

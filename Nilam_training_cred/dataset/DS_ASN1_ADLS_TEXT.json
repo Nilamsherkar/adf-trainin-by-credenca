@@ -11,6 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "fact_03022025",
+				"folderPath": "/ Asn3 / abcd",
 				"fileSystem": "adf-training"
 			},
 			"columnDelimiter": ",",

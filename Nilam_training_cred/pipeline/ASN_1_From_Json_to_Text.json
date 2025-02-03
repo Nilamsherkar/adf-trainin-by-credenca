@@ -54,11 +54,6 @@
 								"sink": {
 									"name": "length"
 								}
-							},
-							{
-								"source": {
-									"path": "$['filename']"
-								}
 							}
 						]
 					}

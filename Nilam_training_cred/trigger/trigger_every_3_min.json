@@ -9,6 +9,12 @@
 					"referenceName": "storage-event-trigger-copy",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "ASN_1_From_Json_to_Text",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",

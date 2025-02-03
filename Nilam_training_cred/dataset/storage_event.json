@@ -1,0 +1,30 @@
+{
+	"name": "storage_event",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "fact",
+				"type": "nvarchar"
+			},
+			{
+				"name": "number",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "date",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "storage_event_trigger"
+		}
+	}
+}

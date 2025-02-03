@@ -2,7 +2,7 @@
 	"name": "trigger_every_3_min",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -17,7 +17,7 @@
 				"frequency": "Minute",
 				"interval": 3,
 				"startTime": "2025-02-03T04:36:00",
-				"endTime": "2025-02-03T17:00:00",
+				"endTime": "2025-02-03T17:15:00",
 				"timeZone": "India Standard Time"
 			}
 		}

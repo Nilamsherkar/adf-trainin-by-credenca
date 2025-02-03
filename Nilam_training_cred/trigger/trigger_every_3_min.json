@@ -6,6 +6,12 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
+					"referenceName": "storage-event-trigger-copy",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
 					"referenceName": "ASN_1_From_Json_to_Text",
 					"type": "PipelineReference"
 				}
@@ -16,7 +22,7 @@
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 3,
-				"startTime": "2025-02-03T18:48:00",
+				"startTime": "2025-02-03T18:41:00",
 				"timeZone": "India Standard Time"
 			}
 		}

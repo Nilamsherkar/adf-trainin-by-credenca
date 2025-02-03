@@ -69,7 +69,10 @@
 						"referenceName": "DS_ASN1_ADLS_TEXT",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')",
+							"filename": {
+								"value": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM-dd'),'.csv')",
+								"type": "Expression"
+							},
 							"foldername": "abcd"
 						}
 					}

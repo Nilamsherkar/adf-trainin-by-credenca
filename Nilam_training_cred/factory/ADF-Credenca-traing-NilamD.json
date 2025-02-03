@@ -1,5 +1,10 @@
 {
 	"name": "ADF-Credenca-traing-NilamD",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
 	"location": "centralindia",
 	"identity": {
 		"type": "SystemAssigned",

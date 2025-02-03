@@ -17,6 +17,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "RestSource",
+						"additionalColumns": [
+							{
+								"name": "filename ",
+								"value": "$$COLUMN:@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')"
+							}
+						],
 						"httpRequestTimeout": "00:01:40",
 						"requestInterval": "00.00:00:00.010",
 						"requestMethod": "GET",
@@ -54,8 +60,17 @@
 								"sink": {
 									"name": "length"
 								}
+							},
+							{
+								"source": {
+									"path": "$['Column_1']"
+								},
+								"sink": {
+									"name": "length"
+								}
 							}
-						]
+						],
+						"mapComplexValuesToString": false
 					}
 				},
 				"inputs": [

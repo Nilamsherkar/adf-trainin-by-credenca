@@ -42,8 +42,45 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"value": "@addminutes(addhours(utcnow(), 5), 30)",
-						"type": "Expression"
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "fact",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "fact",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "length",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "number",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"sink": {
+									"name": "date",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
 					}
 				},
 				"inputs": [

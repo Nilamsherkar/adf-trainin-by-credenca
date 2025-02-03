@@ -20,6 +20,8 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"modifiedDatetimeStart": null,
+							"modifiedDatetimeEnd": null,
 							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
@@ -48,7 +50,11 @@
 				"inputs": [
 					{
 						"referenceName": "DS_ASN1_ADLS_TEXT",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')",
+							"foldername": "/ Asn3 / abcd"
+						}
 					}
 				],
 				"outputs": [

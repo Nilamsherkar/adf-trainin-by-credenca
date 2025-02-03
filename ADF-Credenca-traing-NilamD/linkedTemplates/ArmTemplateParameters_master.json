@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADF-Credenca-traing-NilamD"
+		},
+		"Link_adls_accountKey": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"SqlServer2_password": {
+			"value": ""
+		},
+		"SqlServer3_password": {
+			"value": ""
+		},
+		"adls_exel_accountKey": {
+			"value": ""
+		},
+		"LS_ASN_1_Json_to_text_properties_typeProperties_url": {
+			"value": "https://catfact.ninja/fact"
+		},
+		"Link_adls_properties_typeProperties_url": {
+			"value": "https://credencaazuretraining.dfs.core.windows.net/"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "NILAM\\MSSQLSERVER2022"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "AdventureWorks2014"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "sa2"
+		},
+		"SqlServer2_properties_typeProperties_server": {
+			"value": "NILAM\\MSSQLSERVER2022"
+		},
+		"SqlServer2_properties_typeProperties_database": {
+			"value": "TEST"
+		},
+		"SqlServer2_properties_typeProperties_userName": {
+			"value": "sa2"
+		},
+		"SqlServer3_properties_typeProperties_server": {
+			"value": "Nilam\\nilam"
+		},
+		"SqlServer3_properties_typeProperties_database": {
+			"value": "TEST"
+		},
+		"SqlServer3_properties_typeProperties_userName": {
+			"value": "Nilam\\nilam"
+		},
+		"adls_exel_properties_typeProperties_url": {
+			"value": "https://credencaazuretraining.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

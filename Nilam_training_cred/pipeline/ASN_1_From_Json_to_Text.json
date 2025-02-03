@@ -70,7 +70,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"filename": {
-								"value": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM-dd'),'.csv')",
+								"value": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM-dd-hh-mm-ss'),'.csv')",
 								"type": "Expression"
 							},
 							"foldername": "abcd"

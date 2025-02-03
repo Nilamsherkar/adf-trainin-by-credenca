@@ -33,7 +33,10 @@
 						"type": "SqlServerSink",
 						"writeBehavior": "upsert",
 						"upsertSettings": {
-							"useTempDB": true
+							"useTempDB": true,
+							"keys": [
+								"number"
+							]
 						},
 						"sqlWriterUseTableLock": false
 					},

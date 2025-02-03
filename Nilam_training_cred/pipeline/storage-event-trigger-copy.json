@@ -42,22 +42,14 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
+						"value": "@addminutes(addhours(utcnow(), 5), 30)",
+						"type": "Expression"
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_ASN1_ADLS_TEXT",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')",
-							"foldername": "/ Asn3 / abcd"
-						}
+						"referenceName": "storage_event_adls",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [

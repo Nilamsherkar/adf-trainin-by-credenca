@@ -1,0 +1,32 @@
+{
+	"name": "storage_event_adls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Link_adls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Asn3/abcd",
+				"fileSystem": "adf-training"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "fact",
+				"type": "String"
+			},
+			{
+				"name": "length",
+				"type": "String"
+			}
+		]
+	}
+}

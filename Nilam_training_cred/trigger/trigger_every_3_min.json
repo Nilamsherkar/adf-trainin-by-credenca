@@ -16,8 +16,8 @@
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 3,
-				"startTime": "2025-02-02T06:11:00",
-				"endTime": "2025-02-03T19:00:00",
+				"startTime": "2025-02-03T04:36:00",
+				"endTime": "2025-02-03T17:15:00",
 				"timeZone": "India Standard Time"
 			}
 		}

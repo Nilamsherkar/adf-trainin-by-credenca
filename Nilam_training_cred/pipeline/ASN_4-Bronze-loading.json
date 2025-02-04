@@ -320,7 +320,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"file_m": {
-								"value": "@pipeline().parameters.filename",
+								"value": "substring(toString($$FILENAME), 1, 3)\r\n",
 								"type": "Expression"
 							}
 						}
@@ -330,7 +330,8 @@
 		],
 		"parameters": {
 			"filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "abc"
 			}
 		},
 		"annotations": []

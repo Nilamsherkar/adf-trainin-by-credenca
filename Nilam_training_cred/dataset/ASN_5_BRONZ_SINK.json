@@ -5,11 +5,21 @@
 			"referenceName": "Link_adls",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"file_m": {
+				"type": "String",
+				"defaultValue": "abc"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file_m",
+					"type": "Expression"
+				},
 				"folderPath": "ASN_5/Bronze",
 				"fileSystem": "adf-training"
 			},

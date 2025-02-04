@@ -5,6 +5,14 @@
 			"referenceName": "Link_adls",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"FILENAME": {
+				"type": "string"
+			},
+			"FOLDERNAME": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

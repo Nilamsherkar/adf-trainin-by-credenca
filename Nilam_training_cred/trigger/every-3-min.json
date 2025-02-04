@@ -1,0 +1,17 @@
+{
+	"name": "every-3-min",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 5,
+				"startTime": "2025-02-03T10:10:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

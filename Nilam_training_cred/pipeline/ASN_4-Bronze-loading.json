@@ -320,7 +320,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"file_m": {
-								"value": "substring(toString($$FILENAME), 1, 3)\r\n",
+								"value": "substring(toString(filename), 1, 3)\n",
 								"type": "Expression"
 							}
 						}

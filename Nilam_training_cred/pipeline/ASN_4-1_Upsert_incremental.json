@@ -20,8 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "ASN_5",
-							"wildcardFileName": "?.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -84,8 +82,8 @@
 						"referenceName": "DS_ASN1_ADLS_TEXT",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "abc",
-							"foldername": "abc"
+							"filename": "Superstore_data_2017 2.csv",
+							"foldername": "ASN_5"
 						}
 					}
 				],

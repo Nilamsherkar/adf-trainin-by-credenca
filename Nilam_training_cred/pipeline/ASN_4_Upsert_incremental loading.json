@@ -20,9 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"modifiedDatetimeStart": null,
-							"modifiedDatetimeEnd": null,
-							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -90,8 +87,12 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "storage_event_adls",
-						"type": "DatasetReference"
+						"referenceName": "DS_ASN1_ADLS_TEXT",
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "Superstore_data_2017 2.csv",
+							"foldername": "ASN_5/"
+						}
 					}
 				],
 				"outputs": [

@@ -20,6 +20,10 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"modifiedDatetimeStart": null,
+							"modifiedDatetimeEnd": null,
+							"wildcardFolderPath": " ASN_5/INPUT",
+							"wildcardFileName": "ASN_5/INPUT/Superstore_data ? .CSV",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -294,13 +298,7 @@
 				"inputs": [
 					{
 						"referenceName": "ASN_5_BRONZ_SINK",
-						"type": "DatasetReference",
-						"parameters": {
-							"FILENAME": {
-								"value": "@activity('Get Metadata1').output.childItems.name",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [

@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "ASN_5_BRONZ_SINK",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Link_adls",

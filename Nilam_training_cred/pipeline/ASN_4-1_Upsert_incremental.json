@@ -293,7 +293,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "ASN_5_BRONZ_SINK",
 						"type": "DatasetReference"
 					}
 				],

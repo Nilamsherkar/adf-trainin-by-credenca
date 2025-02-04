@@ -322,7 +322,13 @@
 				"outputs": [
 					{
 						"referenceName": "ASN_5_BRONZ_SINK",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"file_m": {
+								"value": "@pipeline().parameters.filename",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}

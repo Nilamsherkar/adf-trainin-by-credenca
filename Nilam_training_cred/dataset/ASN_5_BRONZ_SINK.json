@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"folderPath": "ASN_5/Bronze",
 				"fileSystem": "adf-training"
 			},
 			"columnDelimiter": ",",

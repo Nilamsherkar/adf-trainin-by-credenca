@@ -28,7 +28,14 @@
 					},
 					"sink": {
 						"type": "SqlServerSink",
-						"writeBehavior": "insert",
+						"writeBehavior": "upsert",
+						"upsertSettings": {
+							"useTempDB": true,
+							"keys": [
+								"Order ID",
+								"Product ID"
+							]
+						},
 						"sqlWriterUseTableLock": false,
 						"tableOption": "autoCreate"
 					},

@@ -45,7 +45,7 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "fact",
+									"name": "Order ID",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -57,7 +57,7 @@
 							},
 							{
 								"source": {
-									"name": "length",
+									"name": "Order Date",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -69,7 +69,7 @@
 							},
 							{
 								"source": {
-									"name": "filename ",
+									"name": "Ship Date",
 									"type": "String",
 									"physicalType": "String"
 								},

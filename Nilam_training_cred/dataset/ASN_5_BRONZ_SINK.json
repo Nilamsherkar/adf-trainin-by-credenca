@@ -10,8 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Superstore_data_2017 2.csv",
-				"folderPath": "/ASN_5/Bronze",
 				"fileSystem": "adf-training"
 			},
 			"columnDelimiter": ",",

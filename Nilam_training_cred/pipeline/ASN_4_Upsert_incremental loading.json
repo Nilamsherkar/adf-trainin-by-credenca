@@ -32,10 +32,8 @@
 						"type": "SqlServerSink",
 						"writeBehavior": "upsert",
 						"upsertSettings": {
-							"useTempDB": true,
-							"keys": [
-								"number"
-							]
+							"useTempDB": false,
+							"keys": []
 						},
 						"sqlWriterUseTableLock": false,
 						"tableOption": "autoCreate"
@@ -43,44 +41,6 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "Order ID",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "fact",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Order Date",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "number",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "Ship Date",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "date",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -100,7 +60,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "storage_event",
+						"referenceName": "SqlServerTable1",
 						"type": "DatasetReference"
 					}
 				]

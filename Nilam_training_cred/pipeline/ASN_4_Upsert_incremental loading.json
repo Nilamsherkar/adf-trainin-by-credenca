@@ -20,6 +20,8 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"wildcardFolderPath": "ASN_5/",
+							"wildcardFileName": "Superstore_data_2017 2.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {

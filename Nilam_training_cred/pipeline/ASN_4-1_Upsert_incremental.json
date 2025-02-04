@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "sales_data_load",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -15,8 +15,86 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableStaging": false
-				}
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"wildcardFolderPath": "ASN_5",
+							"wildcardFileName": "?.csv",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SqlServerSink",
+						"writeBehavior": "upsert",
+						"upsertSettings": {
+							"useTempDB": true
+						},
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ID "
+								},
+								"sink": {
+									"name": "ID",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "NAME"
+								},
+								"sink": {
+									"name": "NAME",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "COUNTRY"
+								},
+								"sink": {
+									"name": "COUNTRY",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_ASN1_ADLS_TEXT",
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "abc",
+							"foldername": "abc"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SqlServerTable2",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []

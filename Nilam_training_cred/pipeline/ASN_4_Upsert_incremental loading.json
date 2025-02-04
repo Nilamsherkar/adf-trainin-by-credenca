@@ -17,15 +17,13 @@
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
-						"additionalColumns": {
-							"type": "Expression",
-							"value": "@concat(source.Segment,'adit')"
-						},
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "ASN_5/",
-							"wildcardFileName": "Superstore_data_2017 2.csv",
+							"modifiedDatetimeStart": null,
+							"modifiedDatetimeEnd": null,
+							"wildcardFolderPath": " ASN_5/INPUT",
+							"wildcardFileName": "Superstore_data ? .CSV",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -303,12 +301,8 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_ASN1_ADLS_TEXT",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "Superstore_data_2017 2.csv",
-							"foldername": "ASN_5/"
-						}
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [

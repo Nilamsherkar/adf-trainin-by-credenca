@@ -317,13 +317,7 @@
 				"outputs": [
 					{
 						"referenceName": "ASN_5_BRONZ_SINK",
-						"type": "DatasetReference",
-						"parameters": {
-							"file_m": {
-								"value": "substring(toString(filename), 1, 3)\n",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}

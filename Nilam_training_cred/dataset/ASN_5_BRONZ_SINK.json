@@ -5,12 +5,6 @@
 			"referenceName": "Link_adls",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"file_m": {
-				"type": "String",
-				"defaultValue": "abc"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

@@ -10,11 +10,7 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "DS_ASN1_ADLS_TEXT",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "@concat('fact_',formatDateTime(utcNow(),'yyyy-MM'),'.csv')",
-							"foldername": "assin_1"
-						}
+						"type": "DatasetReference"
 					},
 					"timeout": "0.12:00:00",
 					"sleep": 10
@@ -37,8 +33,8 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "b",
-					"value": "false"
+					"variableName": "pipelineReturnValue",
+					"setSystemVariable": true
 				}
 			},
 			{
